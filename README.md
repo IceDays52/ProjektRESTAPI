@@ -22,7 +22,7 @@ Backend:
 - Animated UI
 
 ## Screenshots
-(tutaj screen strony)
+
 
 ## Installation
 
