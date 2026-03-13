@@ -21,18 +21,6 @@ Backend:
 - Responsive design
 - Animated UI
 
-## Screenshots
-
-
-## Installation
-
-Frontend:
-npm install
-npm run dev
-
-Backend:
-dotnet run
-
 ## Future improvements
 - Authentication system
 - Admin panel
