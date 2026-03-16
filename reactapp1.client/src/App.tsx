@@ -25,7 +25,7 @@ const reviews: Review[] = [
     { id: 5, author: "Marek Zieliński", text: "Profesjonalizm i indywidualne podejście do klienta w jednym miejscu. Świetne biuro rachunkowe, które naprawdę rozumie potrzeby przedsiębiorcy." }
 ];
 
-const TAGS = ["HTML", "CSS", "JS", "SSG", "webdev", "animation", "UI/UX"];
+const TAGS = ["Ksiegowosc", "Rachunkowosc", "Kadry", "Spolki", "Pomoc(8-16)", "Wsparcie", "Rozrachunki"];
 const TRIPLE_TAGS = [...TAGS, ...TAGS, ...TAGS];
 
 
