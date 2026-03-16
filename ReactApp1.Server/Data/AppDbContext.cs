@@ -10,5 +10,6 @@ namespace ReactApp1.Server.Data
         }
 
         public DbSet<ContactMessage> Uzytkownicy { get; set; }
+        public DbSet<Probnyplan> ProbnePlany { get; set; }
     }
 }

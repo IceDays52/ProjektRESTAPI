@@ -89,7 +89,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 54px;
+    font-size: 50px;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -97,9 +97,13 @@ body {
 
     .hero h1 span {
         color: #7c5cff;
-        margin-left: 2rem;
+        font-weight: 1900;
     }
-
+.DOLACZ {
+    color: #7c5cff;
+    font-weight: 1900;
+    margin-left: 2rem;
+}
 /* Opis g³ówny */
 .Tata {
     padding: 1.5rem;
@@ -151,11 +155,10 @@ body {
     }
 
 .dropdown {
+    display:flex;
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    display: flex;
+    top: calc(100% + 10px);
+    right: -250px;
     width: 450px;
     background: #1a1a24;
     border-radius: 20px;
@@ -165,15 +168,16 @@ body {
     z-index: 1000;
     border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
+    
 }
 
 .lista:hover .dropdown {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(10px);
+
 }
 
-/* Lewa strona dropdown */
+
 .promo-section {
     flex: 1;
     background: #1a1a2e;
@@ -202,7 +206,7 @@ body {
     display: block;
 }
 
-/* Prawa strona dropdown */
+
 .links-section {
     flex: 1.2;
     padding: 1.2rem;
@@ -260,10 +264,10 @@ body {
         border-radius: 30px;
         padding: 2rem;
         display: flex;
-        flex-direction: column; /* Uk³adamy elementy pionowo */
-        align-items: center; /* Centrujemy wszystko w poziomie */
-        justify-content: flex-start; /* Zaczynamy od góry */
-        min-width: 0; /* Zapobiega rozpychaniu przez d³ugi tekst */
+        flex-direction: column; 
+        align-items: center;
+        justify-content: flex-start; 
+        min-width: 0; 
     }
 
 .opinia-display {
@@ -315,7 +319,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     color: white;
-    font-size: 2.2rem; /* Zmniejszono z 3.5rem */
+    font-size: 2.2rem; 
     font-weight: bold;
 }
 
@@ -328,16 +332,16 @@ body {
 .features-list {
     list-style: none;
     padding: 0;
-    margin: 15px 0; /* Zmniejszono z 30px */
+    margin: 15px 0;
 }
 
     .features-list li {
         display: flex;
         align-items: center;
-        gap: 8px; /* Mniejszy odstêp miêdzy ptaszkiem a tekstem */
-        margin-bottom: 8px; /* Zmniejszono z 15px */
+        gap: 8px; 
+        margin-bottom: 8px;
         color: #b0b0b0;
-        font-size: 0.9rem; /* Mniejsza czcionka tekstu */
+        font-size: 0.9rem;
     }
 
 .start-btn {
@@ -384,7 +388,7 @@ body {
     gap: 2rem;
     padding: 20px 0;
     list-style: none;
-    margin: 0; /* Usuwamy domyœlne marginesy ul */
+    margin: 0; 
 }
 
     .scroller_inner li {
@@ -594,20 +598,17 @@ body {
     }
 
     .dropdown {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 100%;
-        transform: translateX(-50%);
-        width: 90vw;
-        max-width: 350px;
+        display:flex;
         flex-direction: column-reverse;
-        background: #1a1c23;
-        border-radius: 40px;
-        padding: 15px;
-        z-index: 1000;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        position: fixed;
+        top: 90px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        transform: none;
     }
+
 
     .links-section {
         border-radius: 40px;
@@ -618,7 +619,7 @@ body {
         display: flex;
         background: rgba(124, 92, 255, 0.1) !important;
         border-radius: 40px;
-        flex-direction: column-reverse
+        flex-direction: column-reverse;
     }
 
 

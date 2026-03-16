@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "D:\\ProjektZbazadanych\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\controllers\\probnyplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\controllers\\probnyplancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\models\\probnyplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\models\\probnyplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\controllers\\uzytkownicycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\controllers\\uzytkownicycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,38 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".env",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\.env",
-              "RelativeDocumentMoniker": "reactapp1.client\\.env",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\.env",
-              "RelativeToolTip": "reactapp1.client\\.env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-13T22:34:10.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\.gitignore",
-              "RelativeDocumentMoniker": "reactapp1.client\\.gitignore",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\.gitignore",
-              "RelativeToolTip": "reactapp1.client\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2026-03-13T22:17:26.189Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 5,
@@ -80,55 +46,78 @@
               "RelativeToolTip": "ReactApp1.Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T20:58:32.05Z"
+              "WhenOpened": "2026-03-13T20:58:32.05Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UzytkownicyController.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\UzytkownicyController.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Controllers\\UzytkownicyController.cs",
               "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\UzytkownicyController.cs",
               "RelativeToolTip": "ReactApp1.Server\\Controllers\\UzytkownicyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T21:17:14.414Z"
+              "WhenOpened": "2026-03-16T22:02:00.424Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ContactMessage.cs",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\ContactMessage.cs",
-              "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\ContactMessage.cs",
-              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\ContactMessage.cs",
-              "RelativeToolTip": "ReactApp1.Server\\Models\\ContactMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ProbnyPlanController.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\ProbnyPlanController.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Controllers\\ProbnyPlanController.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\ProbnyPlanController.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Controllers\\ProbnyPlanController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAD4vxYAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T20:57:57.6Z"
+              "WhenOpened": "2026-03-16T22:01:38.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "ReactApp1.Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T20:55:44.287Z"
+              "WhenOpened": "2026-03-16T22:00:18.62Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Probnyplan.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Probnyplan.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\Probnyplan.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Probnyplan.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Models\\Probnyplan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T21:59:11.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "App.tsx",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.tsx",
               "RelativeDocumentMoniker": "reactapp1.client\\src\\App.tsx",
               "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.tsx",
               "RelativeToolTip": "reactapp1.client\\src\\App.tsx",
-              "ViewState": "AgIAABoAAAAAAAAAAAAkwCcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-11T19:37:34.643Z"
+              "WhenOpened": "2026-03-11T19:37:34.643Z",
+              "EditorCaption": ""
             }
           ]
         }
