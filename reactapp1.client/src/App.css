@@ -781,3 +781,45 @@ body {
         width: 100%;
     }
 }
+
+
+
+.Sekcja {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    margin: 2rem;
+    gap: 3rem;
+}
+.SekcjaD {
+    margin-top: 2rem;
+    background: #1a1a2e;
+    border-radius: 20px;
+    padding: 2rem;
+    flex: 1;
+}
+.SekcjaD span {
+    color: mediumpurple;
+    font-weight: 900;
+}
+.lottie-box {
+    display:flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100%;
+    margin: 20px auto 0;
+}
+
+    .lottie-box svg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+.Teksty {
+    background: rgba(124, 92, 255, 0.1);
+    padding: 1rem;
+    border-radius: 40px;
+}

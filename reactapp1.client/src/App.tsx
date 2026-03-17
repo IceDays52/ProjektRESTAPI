@@ -4,6 +4,7 @@ import heroImage from './image.png';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
+import { useNavigate } from "react-router-dom";
 
 interface Review {
     id: number;
@@ -48,6 +49,7 @@ const fadeUp: Variants = {
     }
 };
 export default function App() {
+    const navigate = useNavigate();
     const [currentIndex, setCurrentIndex] = useState(0);
     const contactRef = useRef<HTMLDivElement>(null);
     const contactKak = useRef<HTMLDivElement>(null);
@@ -249,7 +251,12 @@ export default function App() {
                         </motion.div>
                     </motion.div>
                 </motion.div>
-                <motion.div className="lista"><h1>Wspolpraca</h1></motion.div>
+                <motion.div
+                    onClick={() => navigate("/wspolpraca")}
+                    style={{ cursor: "pointer" }}
+                    className="lista">
+                    <h1>Wspolpraca</h1>
+                </motion.div>
             </motion.header>
 
             <motion.section className="hero" variants={fadeUp}
