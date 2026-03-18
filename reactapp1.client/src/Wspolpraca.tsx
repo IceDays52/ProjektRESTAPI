@@ -149,8 +149,8 @@ export default function Wspolpraca() {
                 <div className="SekcjaD">
                     <div className="Teksty"><h1>Oferta 1 - Student</h1></div>
                     <div className="lottie-box">
-                        <Lottie animationData={animationData} loop={true} />
-                        <p>Cos tam o firmie jak bylo to wygladalo dla studtenda ogolnie tak to ma wygaldac i jakis losowy tekst</p>
+                        <Lottie animationData={animationData} loop={true}/>
+                        <div className="TekstP"><p>Cos tam o firmie jak bylo to wygladalo dla studtenda ogolnie tak to ma wygaldac i jakis losowy tekst</p></div>
                     </div>
                 </div>
                 <div className="SekcjaD">  <div className="Teksty"><h1>Oferta 2 - Doświadoczony</h1> </div>

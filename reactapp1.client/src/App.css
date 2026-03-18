@@ -806,20 +806,29 @@ body {
 .lottie-box {
     display:flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
     width: 100%;
     margin: 20px auto 0;
 }
 
     .lottie-box svg {
-        width: 100%;
+        width: 40%;
         height: auto;
         display: block;
+        
+        border-radius: 40px;
     }
 
 
 .Teksty {
     background: rgba(124, 92, 255, 0.1);
     padding: 1rem;
+    border-radius: 40px;
+}
+.TekstP {
+    color: white;
+    font-weight: 600;
+    padding:1rem;
+    background: rgba(124, 92, 255, 0.1);
     border-radius: 40px;
 }
