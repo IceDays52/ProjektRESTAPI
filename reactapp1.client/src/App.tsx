@@ -6,6 +6,7 @@ import type { Variants } from 'framer-motion';
 import { APIProvider, Map, AdvancedMarker, Pin } from '@vis.gl/react-google-maps';
 import { useNavigate } from "react-router-dom";
 
+
 interface Review {
     id: number;
     author: string;

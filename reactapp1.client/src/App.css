@@ -821,3 +821,36 @@ body {
     background: rgba(124, 92, 255, 0.1);
     border-radius: 40px;
 }
+.Logowanie-Sekcja {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    margin: 2rem;
+    padding: 1rem;
+    background: #1a1a2e;
+    border-radius: 80px;
+}
+    .Logowanie-Sekcja div {
+        background: rgba(124, 92, 255, 0.1);
+        border-radius: 40px;
+        padding: 2rem;
+        width: fit-content;
+    }
+
+.PrzypomnijHaslo {
+    margin-top: auto;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    width: 70%;
+    transition: 0.3s;
+   
+    color: black;
+}
+    .PrzypomnijHaslo:hover {
+        background: #00bcd4;
+        color: white;
+        cursor: pointer;
+    }
