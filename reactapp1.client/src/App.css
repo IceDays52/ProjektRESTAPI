@@ -763,26 +763,19 @@ body {
         width: 100%;
         padding: 2rem;
     }
-
         .register-card-v2 h1 {
             font-size: 1.7rem;
             line-height: 1.2;
             gap: 1rem;
         }
-
             .register-card-v2 h1 span {
                 display: inline;
                 margin-left: 5px;
             }
-
-
-
     .contact-card {
         width: 100%;
     }
 }
-
-
 
 .Sekcja {
     display: flex;
@@ -810,16 +803,12 @@ body {
     width: 100%;
     margin: 20px auto 0;
 }
-
     .lottie-box svg {
         width: 40%;
         height: auto;
         display: block;
-        
         border-radius: 40px;
     }
-
-
 .Teksty {
     background: rgba(124, 92, 255, 0.1);
     padding: 1rem;

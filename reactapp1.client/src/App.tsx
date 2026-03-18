@@ -238,14 +238,23 @@ export default function App() {
                                     initial="hidden"
                                     whileInView="show"
                                     viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div className="link-title" variants={fadeUp}
+                                    <motion.div
+                                        className="link-title"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Insights</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}
+                                        onClick={() => navigate("/logowanie")}
+                                        style={{ cursor: "pointer" }}
+                                        role="button"
+                                        tabIndex={0}
+                                    >
+                                        Zaloguj/Rejestracja
+                                    </motion.div>
                                     <motion.div className="link-description" variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Deep dive</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}></motion.div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>

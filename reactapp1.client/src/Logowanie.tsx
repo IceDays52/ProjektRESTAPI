@@ -1,27 +1,20 @@
-﻿import './App.css';
-import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
+﻿
+import './App.css';
 import { useNavigate } from "react-router-dom";
-import LottieModule from "lottie-react";
-import animationData from "./assets/analytics-animation.json";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-export default function Wspolpraca() {
-    const fadeUp: Variants = {
-        hidden: {
-            opacity: 0,
-            y: 40
-        },
-        show: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.7,
-                ease: "easeOut"
-            }
-        }
-    };
-    const Lottie = (LottieModule as any).default ?? LottieModule;
+const fadeUp: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.7, ease: "easeOut" }
+    }
+};
+export default function Logowanie() {
     const navigate = useNavigate();
+  
     return (
         <>
         <motion.header className="header" variants={fadeUp}
@@ -74,7 +67,7 @@ export default function Wspolpraca() {
                                 <motion.div className="link-description" variants={fadeUp}
                                     initial="hidden"
                                     whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Jak zalozyc firme? Problem z ksefem?</motion.div>
+                                    viewport={{ once: true, amount: 0.2 }}>Jak zalozyc firme? Problem z ksefem?</motion.div>
                             </motion.div>
                         </motion.div>
                         <motion.div className="link-item" variants={fadeUp}
@@ -124,19 +117,10 @@ export default function Wspolpraca() {
                                 initial="hidden"
                                 whileInView="show"
                                 viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div
-                                        className="link-title"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                        onClick={() => navigate("/logowanie")}
-                                        style={{ cursor: "pointer" }}
-                                        role="button"
-                                        tabIndex={0}
-                                    >
-                                        Zaloguj/Rejestracja
-                                    </motion.div>
+                                <motion.div className="link-title" variants={fadeUp}
+                                    initial="hidden"
+                                    whileInView="show"
+                                    viewport={{ once: true, amount: 0.2 }}>Zaloguj/Rejestracja</motion.div>
                                 <motion.div className="link-description" variants={fadeUp}
                                     initial="hidden"
                                     whileInView="show"
@@ -152,33 +136,14 @@ export default function Wspolpraca() {
                 className="lista">
                 <h1>Wspolpraca</h1>
             </motion.div>
-        </motion.header>
-
-            <motion.section className="Sekcja">
-                <div className="SekcjaD">
-                    <div className="Teksty"><h1>Oferta 1 - Student</h1></div>
-                    <div className="lottie-box">
-                        <Lottie animationData={animationData} loop={true}/>
-                        <div className="TekstP"><p>Cos tam o firmie jak bylo to wygladalo dla studtenda ogolnie tak to ma wygaldac i jakis losowy tekst</p></div>
-                    </div>
-                </div>
-                <div className="SekcjaD">  <div className="Teksty"><h1>Oferta 2 - Doświadoczony</h1> </div>
-
-
-
-
-                </div>
-                <div className="SekcjaD">  <div className="Teksty"><h1>Oferta 3 - Wspolpraca <span>B2B</span></h1></div>
-
-
-
-                </div> 
-            </motion.section>
-           
-        </>
+            </motion.header>
         
+
+          <section>
+                <div><h1>ZALOGUJ SIE</h1></div>
+                <div><h1>REJESTRACJA</h1></div>
+
+            </section>
+        </>
     );
-
-
-    console.log(animationData);
 }
