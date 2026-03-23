@@ -460,7 +460,7 @@ body {
 
 .dark-input {
     width: 100%;
-    padding: 1.2rem;
+    padding: 0.7rem;
     background: #1a1a2e;
     border: 1px solid rgba(124, 92, 255, 0.2);
     border-radius: 15px;
@@ -469,7 +469,7 @@ body {
     outline: none;
     transition: all 0.3s ease;
     box-sizing: border-box;
-    max-width: 400px;
+    
 }
 
     .dark-input:focus {
@@ -671,6 +671,8 @@ body {
         box-sizing: border-box;
         overflow: hidden;
         margin: 0 auto;
+        justify-content: center; 
+        align-items: center;
     }
 
     .img-wrapper {
@@ -804,7 +806,7 @@ body {
     margin: 20px auto 0;
 }
     .lottie-box svg {
-        width: 40%;
+        width: 100% !important;
         height: auto;
         display: block;
         border-radius: 40px;
@@ -823,19 +825,21 @@ body {
 }
 .Logowanie-Sekcja {
     display: flex;
-    flex-direction: row;
+    align-items: stretch; 
     justify-content: center;
-    gap: 5rem;
-    margin: 2rem;
-    padding: 1rem;
+    gap: 3rem;
+    maring-top: 1rem !important;
+    margin: auto;
+    padding: 4rem;
     background: #1a1a2e;
     border-radius: 80px;
+    width: fit-content;
 }
-    .Logowanie-Sekcja div {
+    .Logowanie-Sekcja > div {
         background: rgba(124, 92, 255, 0.1);
         border-radius: 40px;
-        padding: 2rem;
-        width: fit-content;
+        padding: 1.1rem;
+        min-width: 420px;
     }
 
 .PrzypomnijHaslo {
@@ -854,3 +858,68 @@ body {
         color: white;
         cursor: pointer;
     }
+
+.date-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100% !important;
+}
+.name-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width : 100% !important;
+}
+.Giff,
+.auth-side {
+    display: flex;
+    flex-direction: column;
+}
+    .Giff svg {
+        width: 600px !important;
+        height: auto !important;
+    }
+.auth-switch {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.switch-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: all 0.25s ease;
+}
+
+    .switch-btn.active {
+        background: white;
+        color: black;
+    }
+
+.auth-panel {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    overflow: hidden;
+}
+
+.login-box,
+.register-box {
+    width: 100%;
+    max-width: 340px;
+    border-radius: 40px;
+    padding: 2rem;
+}
+
+.login-box {
+    background: rgba(124, 92, 255, 0.08);
+}
+
+.register-box {
+    background: rgba(124, 92, 255, 0.14);
+}

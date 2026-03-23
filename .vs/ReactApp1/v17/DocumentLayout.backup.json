@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\ProjektZbazadanych\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\logowanie.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\logowanie.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\logowanie.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\logowanie.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\wspolpraca.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -17,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,61 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Logowanie.tsx",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Logowanie.tsx",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\Logowanie.tsx",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Logowanie.tsx",
-              "RelativeToolTip": "reactapp1.client\\src\\Logowanie.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T21:07:08.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.css",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.css",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\App.css",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.css",
-              "RelativeToolTip": "reactapp1.client\\src\\App.css",
-              "ViewState": "AgIAACgDAAAAAAAAAAAAADkDAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-16T22:19:29.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "main.tsx",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\main.tsx",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\main.tsx",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\main.tsx",
-              "RelativeToolTip": "reactapp1.client\\src\\main.tsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T20:56:36.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.tsx",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.tsx",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\App.tsx",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.tsx",
-              "RelativeToolTip": "reactapp1.client\\src\\App.tsx",
-              "ViewState": "AgIAAOsAAAAAAAAAAADgv/AAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-18T19:15:08.796Z"
             },
             {
               "$type": "Document",
@@ -94,9 +40,46 @@
               "RelativeDocumentMoniker": "reactapp1.client\\src\\Wspolpraca.tsx",
               "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Wspolpraca.tsx",
               "RelativeToolTip": "reactapp1.client\\src\\Wspolpraca.tsx",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAiwIoAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-17T19:44:02.342Z"
+              "WhenOpened": "2026-03-18T22:13:43.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Logowanie.tsx",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Logowanie.tsx",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\Logowanie.tsx",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Logowanie.tsx",
+              "RelativeToolTip": "reactapp1.client\\src\\Logowanie.tsx",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwFsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T21:07:08.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.css",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.css",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\App.css",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.css",
+              "RelativeToolTip": "reactapp1.client\\src\\App.css",
+              "ViewState": "AgIAAA4DAAAAAAAAAAAIwEsDAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-16T22:19:29.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.tsx",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.tsx",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\App.tsx",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\App.tsx",
+              "RelativeToolTip": "reactapp1.client\\src\\App.tsx",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-18T19:15:08.796Z"
             }
           ]
         }
