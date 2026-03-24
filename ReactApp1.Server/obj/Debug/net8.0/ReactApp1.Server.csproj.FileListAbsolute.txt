@@ -69,3 +69,4 @@ D:\ProjektZbazadanych\ReactApp1.Server\bin\Debug\net8.0\MySqlConnector.dll
 D:\ProjektZbazadanych\ReactApp1.Server\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
 D:\ProjektZbazadanych\ReactApp1.Server\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 D:\ProjektZbazadanych\ReactApp1.Server\obj\Debug\net8.0\ReactApp1.Server.sourcelink.json
+D:\ProjektZbazadanych\ReactApp1.Server\bin\Debug\net8.0\BCrypt.Net-Next.dll

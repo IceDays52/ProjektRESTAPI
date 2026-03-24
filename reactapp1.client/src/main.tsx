@@ -5,6 +5,7 @@ import './App.css';
 import Wspolpraca from './Wspolpraca';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Logowanie from "./Logowanie";
+import ProfilKonta from "./ProfilKonta";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <Route path="/" element={<App />} />
                 <Route path="/wspolpraca" element={<Wspolpraca />} />
                 <Route path="/logowanie" element={<Logowanie />} />
+                <Route path="/profil-konta" element={<ProfilKonta />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ReactApp1.Server.Data;
 using ReactApp1.Server.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace ReactApp1.Server.Controllers
 {
@@ -22,13 +22,16 @@ namespace ReactApp1.Server.Controllers
             var lista = await _context.Uzytkownicy.ToListAsync();
             return Ok(lista);
         }
+
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] ContactMessage nowyUzytkownik)
+        public async Task<IActionResult> Post([FromBody] ContactMessage nowaWiadomosc)
         {
-            nowyUzytkownik.data_rejestracji = DateTime.Now;
-            _context.Uzytkownicy.Add(nowyUzytkownik);
+            nowaWiadomosc.data_rejestracji = DateTime.Now;
+
+            _context.Uzytkownicy.Add(nowaWiadomosc);
             await _context.SaveChangesAsync();
-            return Ok(nowyUzytkownik);
+
+            return Ok(nowaWiadomosc);
         }
     }
 }

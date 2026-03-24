@@ -104,7 +104,7 @@ body {
     font-weight: 1900;
     margin-left: 2rem;
 }
-/* Opis g³ówny */
+
 .Tata {
     padding: 1.5rem;
     background: #1a1a2e;
@@ -922,4 +922,66 @@ body {
 
 .register-box {
     background: rgba(124, 92, 255, 0.14);
+}
+.toast {
+    width:500px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 900;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+    .toast.success {
+        background: #11111a;
+    }
+
+    .toast.error {
+        background: #11111a;
+    }
+
+
+.Layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.Boczny {
+    width: 100px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.08);
+    transition: width 0.3s ease;
+}
+
+    
+    .Boczny:hover {
+        width: 220px;
+    }
+
+.Konto {
+    flex: 1;
+    padding: 2rem;
+    margin: 1rem 5rem 0 5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 90px;
+}
+    .Konto div {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        margin: 1rem;
+        background: #11111a;
+        border-radius: 90px;
+        padding: 2rem;
+        
+    }
+.Profil{
+    width: 30% !important;
 }

@@ -1,10 +1,11 @@
-﻿import './App.css';
+﻿import "./App.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import LottieModule from "lottie-react";
 import animationData from "./assets/zpunet-icon.json";
+import { useEffect } from "react";
 
 
 const fadeUp: Variants = {
@@ -14,8 +15,8 @@ const fadeUp: Variants = {
         y: 0,
         transition: { duration: 0.7, ease: "easeOut" }
     }
-
 };
+
 const formVariants: Variants = {
     hidden: { opacity: 0, x: 40, scale: 0.98 },
     visible: {
@@ -33,15 +34,25 @@ const formVariants: Variants = {
 };
 
 export default function Logowanie() {
+    const [message, setMessage] = useState<string | null>(null);
+    const [messageType, setMessageType] = useState<"success" | "error" | null>(null);
+    useEffect(() => {
+        if (message) {
+            const timer = setTimeout(() => {
+                setMessage(null);
+            }, 6000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [message]);
+
+   
+
     const navigate = useNavigate();
     const Lottie = (LottieModule as any).default ?? LottieModule;
 
-    
-   
     const [login, setLogin] = useState("");
-    const [email, setEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
-
 
     const [registerLogin, setRegisterLogin] = useState("");
     const [registerEmail, setRegisterEmail] = useState("");
@@ -56,47 +67,29 @@ export default function Logowanie() {
     const [day, setDay] = useState("");
     const [month, setMonth] = useState("");
     const [year, setYear] = useState("");
+
     const [isLogin, setIsLogin] = useState(true);
 
-
-    const handleLoginSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        if (!login || !email || !loginPassword) {
-            alert("Wypełnij wszystkie pola");
-            return;
-        }
-
-        const loginData = {
-            login,
-            email,
-            password: loginPassword
-        };
-
-        try {
-            const response = await fetch("https://localhost:5001/api/auth/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(loginData)
-            });
-
-            if (!response.ok) {
-                throw new Error("Błąd logowania");
-            }
-
-            const data = await response.json();
-            console.log("Zalogowano:", data);
-
-        } catch (error) {
-            console.error("Błąd:", error);
-            alert("Nie udało się zalogować");
-        }
+    const resetLoginForm = () => {
+        setLogin("");
+        setLoginPassword("");
     };
+
+    const resetRegisterForm = () => {
+        setRegisterLogin("");
+        setRegisterEmail("");
+        setConfirmEmail("");
+        setRegisterPassword("");
+        setConfirmPassword("");
+        setFirstName("");
+        setLastName("");
+        setDay("");
+        setMonth("");
+        setYear("");
+    };
+
     const handleRegisterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
 
         if (
             !registerLogin ||
@@ -106,23 +99,30 @@ export default function Logowanie() {
             !confirmPassword ||
             !firstName ||
             !lastName ||
-            !day || !month || !year
+            !day ||
+            !month ||
+            !year
         ) {
-            alert("Wypełnij wszystkie pola");
+            setMessage("Wypełnij wszystkie pola");
+            setMessageType("error");
+            resetRegisterForm();
             return;
         }
 
         if (registerEmail !== confirmEmail) {
-            alert("E-maile się nie zgadzają");
+            setMessage("E-maile się nie zgadzają");
+            setMessageType("error");
+            resetRegisterForm();
             return;
         }
 
         if (registerPassword !== confirmPassword) {
-            alert("Hasła się nie zgadzają");
+            setMessage("Hasła się nie zgadzają");
+            setMessageType("error");
+            resetRegisterForm();
             return;
         }
 
-        
         const birthDate = `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
 
         const registerData = {
@@ -135,133 +135,267 @@ export default function Logowanie() {
         };
 
         try {
-            const response = await fetch("https://localhost:5001/api/auth/register", {
+            const response = await fetch("https://localhost:7093/api/Auth/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
+                credentials: "include",
                 body: JSON.stringify(registerData)
             });
 
+            const data = await response.json();
+
             if (!response.ok) {
-                throw new Error("Błąd rejestracji");
+                throw new Error(data?.message || "Błąd rejestracji");
             }
 
-            const data = await response.json();
             console.log("Rejestracja OK:", data);
-
-            alert("Konto utworzone!");
-
+            setMessage("Konto utworzone!");
+            setMessageType("success");
+            setIsLogin(true);
         } catch (error) {
             console.error("Błąd:", error);
-            alert("Nie udało się zarejestrować");
+            setMessage("Nie udało się zarejestrować");
+            setMessageType("error");
+        } finally {
+            resetRegisterForm();
         }
     };
 
+    const handleLoginSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
 
+        if (!login || !loginPassword) {
+            alert("Wypełnij wszystkie pola");
+            resetLoginForm();
+            return;
+        }
+
+        const loginData = {
+            login,
+            password: loginPassword
+        };
+
+        try {
+            const response = await fetch("https://localhost:7093/api/Auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                credentials: "include",
+                body: JSON.stringify(loginData)
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data?.message || "Błąd logowania");
+            }
+
+            console.log("Zalogowano:", data);
+            setMessage("Zalogowano poprawnie");
+            setMessageType("success");
+
+            setTimeout(() => {
+                navigate("/profil-konta");
+            }, 800);
+        } catch (error) {
+            console.error("Błąd:", error);
+            setMessage("Nie udało się zalogować");
+            setMessageType("error");
+        } finally {
+            resetLoginForm();
+        }
+    };
 
     return (
         <>
-            <motion.header className="header" variants={fadeUp}
+            <motion.header
+                className="header"
+                variants={fadeUp}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.2 }} >
-                <motion.div className="logo" onClick={() => navigate("/")} style={{ cursor: "pointer" }} variants={fadeUp}
+                viewport={{ once: true, amount: 0.2 }}
+            >
+                <motion.div
+                    className="logo"
+                    onClick={() => navigate("/")}
+                    style={{ cursor: "pointer" }}
+                    variants={fadeUp}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}><h1>MC</h1></motion.div>
-                <motion.div className="lista" variants={fadeUp}
+                    viewport={{ once: true, amount: 0.2 }}
+                >
+                    <h1>MC</h1>
+                </motion.div>
+
+                <motion.div
+                    className="lista"
+                    variants={fadeUp}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}>
+                    viewport={{ once: true, amount: 0.2 }}
+                >
                     <h1>Oferta</h1>
-                    <motion.div className="dropdown" variants={fadeUp}
+
+                    <motion.div
+                        className="dropdown"
+                        variants={fadeUp}
                         initial="hidden"
                         whileInView="show"
-                        viewport={{ once: true, amount: 0.2 }}>
-                        <motion.div className="promo-section" variants={fadeUp}
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <motion.div
+                            className="promo-section"
+                            variants={fadeUp}
                             initial="hidden"
                             whileInView="show"
-                            viewport={{ once: true, amount: 0.2 }}>
-                            <motion.div className="promo-box" variants={fadeUp}
+                            viewport={{ once: true, amount: 0.2 }}
+                        >
+                            <motion.div
+                                className="promo-box"
+                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
                                 <div className="promo-icon">💼</div>
                                 <p>Zatrudniamy</p>
                                 <span>Sprawdz nas</span>
                             </motion.div>
                         </motion.div>
-                        <motion.div className="links-section" variants={fadeUp}
+
+                        <motion.div
+                            className="links-section"
+                            variants={fadeUp}
                             initial="hidden"
                             whileInView="show"
-                            viewport={{ once: true, amount: 0.2 }}>
-                            <motion.div className="link-item" variants={fadeUp}
+                            viewport={{ once: true, amount: 0.2 }}
+                        >
+                            <motion.div
+                                className="link-item"
+                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
                                 <span className="link-icon">📊</span>
-                                <motion.div className="link-content" variants={fadeUp}
+                                <motion.div
+                                    className="link-content"
+                                    variants={fadeUp}
                                     initial="hidden"
                                     whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div className="link-title" variants={fadeUp}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                >
+                                    <motion.div
+                                        className="link-title"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Zaloz Firme/Ksef Informacje</motion.div>
-                                    <motion.div className="link-description" variants={fadeUp}
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        Zaloz Firme/Ksef Informacje
+                                    </motion.div>
+                                    <motion.div
+                                        className="link-description"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Jak zalozyc firme? Problem z ksefem?</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        Jak zalozyc firme? Problem z ksefem?
+                                    </motion.div>
                                 </motion.div>
                             </motion.div>
-                            <motion.div className="link-item" variants={fadeUp}
+
+                            <motion.div
+                                className="link-item"
+                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
                                 <span className="link-icon">📈</span>
-                                <motion.div className="link-content" variants={fadeUp}
+                                <motion.div
+                                    className="link-content"
+                                    variants={fadeUp}
                                     initial="hidden"
                                     whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div className="link-title" variants={fadeUp}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                >
+                                    <motion.div
+                                        className="link-title"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Ksiegowosc</motion.div>
-                                    <motion.div className="link-description" variants={fadeUp}
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        Ksiegowosc
+                                    </motion.div>
+                                    <motion.div
+                                        className="link-description"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Jak wyglada praca z nami!!</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        Jak wyglada praca z nami!!
+                                    </motion.div>
                                 </motion.div>
                             </motion.div>
-                            <motion.div className="link-item" variants={fadeUp}
+
+                            <motion.div
+                                className="link-item"
+                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
                                 <span className="link-icon">📄</span>
-                                <motion.div className="link-content" variants={fadeUp}
+                                <motion.div
+                                    className="link-content"
+                                    variants={fadeUp}
                                     initial="hidden"
                                     whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div className="link-title" variants={fadeUp}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                >
+                                    <motion.div
+                                        className="link-title"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Cennik</motion.div>
-                                    <motion.div className="link-description" variants={fadeUp}
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        Cennik
+                                    </motion.div>
+                                    <motion.div
+                                        className="link-description"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Zobacz cennik ksiegowosci</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    >
+                                        Zobacz cennik ksiegowosci
+                                    </motion.div>
                                 </motion.div>
                             </motion.div>
-                            <motion.div className="link-item" variants={fadeUp}
+
+                            <motion.div
+                                className="link-item"
+                                variants={fadeUp}
                                 initial="hidden"
                                 whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
                                 <span className="link-icon">🔍</span>
-                                <motion.div className="link-content" variants={fadeUp}
+                                <motion.div
+                                    className="link-content"
+                                    variants={fadeUp}
                                     initial="hidden"
                                     whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}>
+                                    viewport={{ once: true, amount: 0.2 }}
+                                >
                                     <motion.div
                                         className="link-title"
                                         variants={fadeUp}
@@ -275,19 +409,25 @@ export default function Logowanie() {
                                     >
                                         Zaloguj/Rejestracja
                                     </motion.div>
-                                    <motion.div className="link-description" variants={fadeUp}
+
+                                    <motion.div
+                                        className="link-description"
+                                        variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}></motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}
+                                    />
                                 </motion.div>
                             </motion.div>
                         </motion.div>
                     </motion.div>
                 </motion.div>
+
                 <motion.div
                     onClick={() => navigate("/wspolpraca")}
                     style={{ cursor: "pointer" }}
-                    className="lista">
+                    className="lista"
+                >
                     <h1>Wspolpraca</h1>
                 </motion.div>
             </motion.header>
@@ -304,7 +444,10 @@ export default function Logowanie() {
                         <button
                             type="button"
                             className={isLogin ? "switch-btn active" : "switch-btn"}
-                            onClick={() => setIsLogin(true)}
+                            onClick={() => {
+                                resetRegisterForm();
+                                setIsLogin(true);
+                            }}
                         >
                             Zaloguj się
                         </button>
@@ -312,11 +455,15 @@ export default function Logowanie() {
                         <button
                             type="button"
                             className={!isLogin ? "switch-btn active" : "switch-btn"}
-                            onClick={() => setIsLogin(false)}
+                            onClick={() => {
+                                resetLoginForm();
+                                setIsLogin(false);
+                            }}
                         >
                             Rejestracja
                         </button>
                     </div>
+
                     <div className="auth-panel">
                         <AnimatePresence mode="wait">
                             {isLogin ? (
@@ -340,14 +487,6 @@ export default function Logowanie() {
                                         />
 
                                         <input
-                                            type="email"
-                                            placeholder="Twój e-mail"
-                                            className="dark-input"
-                                            value={email}
-                                            onChange={(e) => setEmail(e.target.value)}
-                                        />
-
-                                        <input
                                             type="password"
                                             placeholder="Hasło"
                                             className="dark-input"
@@ -359,8 +498,12 @@ export default function Logowanie() {
                                             Zaloguj się
                                         </button>
 
-                                        <button type="button" className="PrzypomnijHaslo">
-                                            Przypomnij hasło
+                                        <button
+                                            type="button"
+                                            className="PrzypomnijHaslo"
+                                            onClick={resetLoginForm}
+                                        >
+                                            Wyczyść pola
                                         </button>
                                     </form>
                                 </motion.div>
@@ -486,9 +629,20 @@ export default function Logowanie() {
                             )}
                         </AnimatePresence>
                     </div>
-                    </div>
-              
+                </div>
             </section>
+            <AnimatePresence>
+                {message && (
+                    <motion.div
+                        className={`toast ${messageType}`}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 50 }}
+                    >
+                        {message}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 }
