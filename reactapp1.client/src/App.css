@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -946,42 +946,12 @@ body {
     }
 
 
-.Layout {
-    display: flex;
-    min-height: 100vh;
-}
 
 
-.Boczny {
-    width: 100px;
-    padding: 1rem;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.08);
-    transition: width 0.3s ease;
-}
 
-    
-    .Boczny:hover {
-        width: 220px;
-    }
 
-.Konto {
-    flex: 1;
-    padding: 2rem;
-    margin: 1rem 5rem 0 5rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 90px;
-}
-    .Konto div {
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-        margin: 1rem;
-        background: #11111a;
-        border-radius: 90px;
-        padding: 2rem;
-        
-    }
-.Profil{
-    width: 30% !important;
-}
+
+
+
+
+

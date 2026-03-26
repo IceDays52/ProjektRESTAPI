@@ -12,9 +12,13 @@
     <PackageJsonDependenciesVisGlReactGoogleMaps Condition="$(PackageJsonDependenciesVisGlReactGoogleMaps) == ''">^1.7.1</PackageJsonDependenciesVisGlReactGoogleMaps>
     <PackageJsonDependenciesFramerMotion Condition="$(PackageJsonDependenciesFramerMotion) == ''">^12.35.2</PackageJsonDependenciesFramerMotion>
     <PackageJsonDependenciesLottieReact Condition="$(PackageJsonDependenciesLottieReact) == ''">^2.4.1</PackageJsonDependenciesLottieReact>
+    <PackageJsonDependenciesPowerbiClient Condition="$(PackageJsonDependenciesPowerbiClient) == ''">^2.23.10</PackageJsonDependenciesPowerbiClient>
+    <PackageJsonDependenciesPowerbiClientReact Condition="$(PackageJsonDependenciesPowerbiClientReact) == ''">^2.0.2</PackageJsonDependenciesPowerbiClientReact>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.2.0</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.2.0</PackageJsonDependenciesReactDom>
+    <PackageJsonDependenciesReactIcons Condition="$(PackageJsonDependenciesReactIcons) == ''">^5.6.0</PackageJsonDependenciesReactIcons>
     <PackageJsonDependenciesReactRouterDom Condition="$(PackageJsonDependenciesReactRouterDom) == ''">^7.13.1</PackageJsonDependenciesReactRouterDom>
+    <PackageJsonDependenciesRecharts Condition="$(PackageJsonDependenciesRecharts) == ''">^3.8.1</PackageJsonDependenciesRecharts>
     <PackageJsonDevdependenciesEslintJs Condition="$(PackageJsonDevdependenciesEslintJs) == ''">^9.39.1</PackageJsonDevdependenciesEslintJs>
     <PackageJsonDevdependenciesTypesNode Condition="$(PackageJsonDevdependenciesTypesNode) == ''">^24.10.1</PackageJsonDevdependenciesTypesNode>
     <PackageJsonDevdependenciesTypesReact Condition="$(PackageJsonDevdependenciesTypesReact) == ''">^19.2.14</PackageJsonDevdependenciesTypesReact>
