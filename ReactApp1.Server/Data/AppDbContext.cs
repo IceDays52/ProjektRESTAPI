@@ -10,12 +10,17 @@ namespace ReactApp1.Server.Data
         }
 
         public DbSet<User> Users { get; set; }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<User>().ToTable("users");
-        }
         public DbSet<ContactMessage> Uzytkownicy { get; set; }
         public DbSet<Probnyplan> ProbnePlany { get; set; }
         public DbSet<Finanse> Finanse { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<ClientDocument> Documents { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<User>().ToTable("users");
+        }
     }
 }
