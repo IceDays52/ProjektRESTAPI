@@ -48,26 +48,36 @@ namespace ReactApp1.Server.Controllers
                 await request.File.CopyToAsync(stream);
             }
 
-            var document = new ClientDocument
+            try
             {
-                UserId = request.UserId,
-                OriginalFileName = request.File.FileName,
-                StoredFileName = storedFileName,
-                ContentType = request.File.ContentType,
-                FileSize = request.File.Length,
-                UploadedAt = DateTime.Now,
-                Category = request.Category,
-                Status = "uploaded"
-            };
+                var document = new ClientDocument
+                {
+                    UserId = request.UserId,
+                    OriginalFileName = request.File.FileName,
+                    StoredFileName = storedFileName,
+                    ContentType = request.File.ContentType,
+                    FileSize = request.File.Length,
+                    UploadedAt = DateTime.Now,
+                    Category = request.Category,
+                    Status = "uploaded"
+                };
 
-            _context.Documents.Add(document);
-            await _context.SaveChangesAsync();
+                _context.Documents.Add(document);
+                await _context.SaveChangesAsync();
 
-            return Ok(new
+                return Ok(new
+                {
+                    message = "Plik został zapisany.",
+                    documentId = document.Id
+                });
+            }
+            catch (Exception ex)
             {
-                message = "Plik został zapisany.",
-                documentId = document.Id
-            });
+                if (System.IO.File.Exists(fullPath))
+                    System.IO.File.Delete(fullPath);
+
+                return StatusCode(500, $"Błąd zapisu do bazy: {ex.Message}");
+            }
         }
 
         [HttpGet("my/{userId}")]
@@ -90,7 +100,6 @@ namespace ReactApp1.Server.Controllers
 
             return Ok(documents);
         }
-
 
         [HttpGet("download/{id}")]
         public async Task<IActionResult> Download(int id)

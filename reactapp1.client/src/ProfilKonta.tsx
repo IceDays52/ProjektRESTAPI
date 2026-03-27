@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+Ôªøimport { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./ProfilKonta.css";
 import { CgSmile, CgSmileSad, CgSmileNeutral } from "react-icons/cg";
 import WykresyFinanse from "./WykresyFinanse";
 import StatystykiWykresy from "./StatystykiWykresy";
+import KolowyWykresFinanse from "./KolowyWykresFinanse";
 
 export default function ProfilKonta() {
     const [login, setLogin] = useState("");
@@ -14,6 +15,8 @@ export default function ProfilKonta() {
     const [userId, setUserId] = useState<number | null>(null);
     const [documents, setDocuments] = useState<any[]>([]);
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
+    const [uploadStatus, setUploadStatus] = useState<"success" | "error" | null>(null);
+    const [uploadMessage, setUploadMessage] = useState("");
 
     const moodIcons = {
         happy: CgSmile,
@@ -39,60 +42,64 @@ export default function ProfilKonta() {
                 setUserId(data.id);
             })
             .catch(() => {
-                setLogin("Brak uøytkownika");
+                setLogin("Brak u≈ºytkownika");
                 setUserId(null);
             });
     }, []);
 
+  
     useEffect(() => {
-        if (!login || login === "Brak uøytkownika") return;
+        if (!login || login === "Brak u≈ºytkownika") return;
 
         fetch(`https://localhost:7093/api/Notifications/${login}`, {
             credentials: "include",
         })
-            .then((res) => {
-                if (!res.ok) throw new Error("B≥πd pobierania powiadomieÒ");
-                return res.json();
-            })
-            .then((data) => {
-                console.log("POWIADOMIENIA:", data);
-                setNotifications(data);
-            })
-            .catch((err) => {
-                console.error(err);
-                setNotifications([]);
-            });
+            .then((res) => res.json())
+            .then((data) => setNotifications(data))
+            .catch(() => setNotifications([]));
     }, [login]);
 
+ 
     useEffect(() => {
         if (!userId) return;
 
         fetch(`https://localhost:7093/api/Documents/my/${userId}`, {
             credentials: "include",
         })
-            .then((res) => {
-                if (!res.ok) throw new Error("B≥πd pobierania dokumentÛw");
-                return res.json();
-            })
-            .then((data) => {
-                console.log("DOKUMENTY:", data);
-                setDocuments(data);
-            })
-            .catch((err) => {
-                console.error(err);
-                setDocuments([]);
-            });
+            .then((res) => res.json())
+            .then((data) => setDocuments(data))
+            .catch(() => setDocuments([]));
     }, [userId]);
 
+    useEffect(() => {
+        if (!uploadStatus) return;
+
+        const timer = setTimeout(() => {
+            setUploadStatus(null);
+            setUploadMessage("");
+        }, 3000);
+
+        return () => clearTimeout(timer);
+    }, [uploadStatus]);
+
+    
     const handleUpload = async () => {
-        if (!selectedFile || !userId) return;
+        if (!selectedFile) {
+            setUploadStatus("error");
+            setUploadMessage("Najpierw wybierz plik.");
+            return;
+        }
+
+        if (!userId) {
+            setUploadStatus("error");
+            setUploadMessage("Brak u≈ºytkownika.");
+            return;
+        }
 
         const formData = new FormData();
         formData.append("file", selectedFile);
         formData.append("userId", String(userId));
-        formData.append("uploadedByUserId", String(userId));
         formData.append("category", "faktura");
-        formData.append("direction", "client_to_office");
 
         try {
             const response = await fetch("https://localhost:7093/api/Documents/upload", {
@@ -106,41 +113,21 @@ export default function ProfilKonta() {
                 throw new Error(errorText);
             }
 
+          
             const refreshed = await fetch(`https://localhost:7093/api/Documents/my/${userId}`, {
                 credentials: "include",
             });
 
             const data = await refreshed.json();
             setDocuments(data);
+
             setSelectedFile(null);
-        } catch (error) {
-            console.error("UPLOAD ERROR:", error);
-        }
-    };
-
-    const handleDownload = async (id: number, fileName: string) => {
-        try {
-            const response = await fetch(`https://localhost:7093/api/Documents/download/${id}`, {
-                credentials: "include",
-            });
-
-            if (!response.ok) {
-                throw new Error("Nie uda≥o siÍ pobraÊ pliku");
-            }
-
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-
-            const a = document.createElement("a");
-            a.href = url;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-
-            window.URL.revokeObjectURL(url);
-        } catch (error) {
-            console.error("DOWNLOAD ERROR:", error);
+            setUploadStatus("success");
+            setUploadMessage("Dokument zosta≈Ç wys≈Çany.");
+        } catch (err) {
+            console.error(err);
+            setUploadStatus("error");
+            setUploadMessage("B≈ÇƒÖd wysy≈Çania dokumentu.");
         }
     };
 
@@ -150,7 +137,6 @@ export default function ProfilKonta() {
                 <button
                     className="profil-sidebar-trigger"
                     onClick={() => setMenuOpen((prev) => !prev)}
-                    aria-label="OtwÛrz menu"
                     type="button"
                 >
                     <div className="profil-bars">
@@ -166,21 +152,9 @@ export default function ProfilKonta() {
                     </h1>
 
                     <nav className="profil-nav">
-                        <NavLink to="/" onClick={() => setMenuOpen(false)}>
-                            Strona glowna
-                        </NavLink>
-                        <NavLink to="/profil" onClick={() => setMenuOpen(false)}>
-                            Profil
-                        </NavLink>
-                        <NavLink to="/statystyki" onClick={() => setMenuOpen(false)}>
-                            Statystyki
-                        </NavLink>
-                        <NavLink to="/raporty" onClick={() => setMenuOpen(false)}>
-                            Raporty
-                        </NavLink>
-                        <NavLink to="/ustawienia" onClick={() => setMenuOpen(false)}>
-                            Ustawienia
-                        </NavLink>
+                        <NavLink to="/">P≈Çatno≈õci</NavLink>
+                        <NavLink to="/profil">Faktury</NavLink>
+                        <NavLink to="/statystyki">Statystyki</NavLink>
                     </nav>
                 </div>
             </aside>
@@ -192,28 +166,44 @@ export default function ProfilKonta() {
                     </h1>
                 </div>
 
-                <section className="profil-cardd">
-                    <div>
+                <section className="profil-cardd documents-notifications-section">
+                    {}
+                    <div className="panel-column">
                         <h2>Powiadomienia</h2>
 
-                        {notifications.length === 0 ? (
-                            <p>Brak powiadomien</p>
-                        ) : (
-                            <ul className="notifications-list">
-                                {notifications.map((item: any) => (
-                                    <li key={item.id} className="notification-item">
-                                        <h4>{item.title}</h4>
-                                        <p>{item.message}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
+                        <div className="panel-box">
+                            {notifications.length === 0 ? (
+                                <p>Brak powiadomie≈Ñ</p>
+                            ) : (
+                                <ul className="notifications-list">
+                                    {notifications.map((n: any) => (
+                                        <li key={n.id}>
+                                            <h4>{n.title}</h4>
+                                            <p>{n.message}</p>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
                     </div>
 
-                    <div>
+                    {}
+                    <div className="panel-column">
                         <h2>Dokumenty</h2>
 
-                        <div className="documents-upload">
+                        {uploadStatus && (
+                            <div
+                                className={
+                                    uploadStatus === "success"
+                                        ? "upload-alert upload-alert-success"
+                                        : "upload-alert upload-alert-error"
+                                }
+                            >
+                                {uploadMessage}
+                            </div>
+                        )}
+
+                        <div className="panel-box documents-upload">
                             <label className="file-upload-label">
                                 <input
                                     type="file"
@@ -226,54 +216,35 @@ export default function ProfilKonta() {
                                 <span>Wybierz plik</span>
                             </label>
 
-                            <span className="selected-file-name">
-                                {selectedFile ? selectedFile.name : "Nie wybrano pliku"}
-                            </span>
+                           
 
                             <button
                                 className="upload-btn"
                                 onClick={handleUpload}
                                 disabled={!selectedFile}
                             >
-                                Wyslij dokument
+                                Wy≈õlij dokument  {selectedFile ? selectedFile.name : "Nie wybrano pliku"}
                             </button>
                         </div>
 
-                        <div className="documents-list">
-                            {documents.length === 0 ? (
-                                <p>Brak dokumentÛw</p>
-                            ) : (
-                                <ul>
-                                    {documents.map((doc: any) => (
-                                        <li key={doc.id}>
-                                            <span>{doc.originalFileName}</span>
-                                            <button
-                                                onClick={() =>
-                                                    handleDownload(doc.id, doc.originalFileName)
-                                                }
-                                            >
-                                                Pobierz
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    </div>
+                  </div>
                 </section>
 
+                {}
                 <section className="profil-card">
-                    <h2>Koszty / Przychody</h2>
+                    <h2>Podsumowanie roczne</h2>
+                    <KolowyWykresFinanse login={login} />
+                </section>
+
+                {}
+                <section className="profil-card">
+                    <h2>Statystyki</h2>
                     <WykresyFinanse login={login} />
                 </section>
 
                 <section className="profil-card">
-                    <h2>Statystyki</h2>
+                    <h2>Dodatkowe statystyki</h2>
                     <StatystykiWykresy login={login} />
-                </section>
-
-                <section className="profil-card">
-                    <h2>Za≥πczniki - do pobrania</h2>
                 </section>
             </main>
         </div>

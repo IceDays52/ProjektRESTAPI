@@ -110,10 +110,21 @@ namespace ReactApp1.Server.Controllers
         [HttpGet("me")]
         public IActionResult Me()
         {
+            var login = User.Identity?.Name;
+
+            if (string.IsNullOrEmpty(login))
+                return Unauthorized();
+
+            var user = _context.Users.FirstOrDefault(u => u.Login == login);
+
+            if (user == null)
+                return NotFound();
+
             return Ok(new
             {
-                login = User.Identity?.Name,
-                email = User.FindFirst(ClaimTypes.Email)?.Value
+                id = user.Id,
+                login = user.Login,
+                email = user.Email
             });
         }
         [HttpPost("logout")]

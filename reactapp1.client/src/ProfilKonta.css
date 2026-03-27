@@ -344,9 +344,10 @@
 
 .documents-upload {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    
     gap: 16px;
-    flex-wrap: wrap;
+   
 }
 
 .file-upload-label {
@@ -493,5 +494,118 @@
     .documents-list li {
         flex-direction: column;
         align-items: stretch;
+    }
+}
+.documents-notifications-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.panel-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+    .panel-column h2 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+.panel-box {
+    background: rgba(83, 63, 160, 0.18);
+    border: 1px solid rgba(140, 122, 255, 0.18);
+    border-radius: 34px;
+    padding: 26px;
+    backdrop-filter: blur(6px);
+}
+
+.empty-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1rem;
+}
+
+.upload-alert {
+    padding: 14px 18px;
+    border-radius: 18px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    border: 1px solid transparent;
+    animation: fadeInAlert 0.25s ease;
+}
+
+.upload-alert-success {
+    background: rgba(45, 212, 145, 0.14);
+    border-color: rgba(45, 212, 145, 0.35);
+    color: #8df4bf;
+}
+
+.upload-alert-error {
+    background: rgba(248, 113, 113, 0.14);
+    border-color: rgba(248, 113, 113, 0.35);
+    color: #ff9b9b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kolowy-finanse-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kolowy-finanse-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.kolowy-summary-card {
+    padding: 18px 20px;
+    border-radius: 22px;
+    background: rgba(83, 63, 160, 0.18);
+    border: 1px solid rgba(140, 122, 255, 0.18);
+}
+
+    .kolowy-summary-card span {
+        display: block;
+        margin-bottom: 8px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.98rem;
+    }
+
+    .kolowy-summary-card strong {
+        color: #ffffff;
+        font-size: 1.35rem;
+        font-weight: 800;
+    }
+
+.kolowy-finanse-chart {
+    border-radius: 28px;
+    background: rgba(83, 63, 160, 0.12);
+    padding: 16px;
+    min-height: 340px;
+}
+
+@media (max-width: 900px) {
+    .kolowy-finanse-summary {
+        grid-template-columns: 1fr;
     }
 }
