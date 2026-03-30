@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\ProjektZbazadanych\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -50,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,6 +71,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Program.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Program.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Program.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Program.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T15:07:56.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\appsettings.json",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\appsettings.json",
+              "RelativeToolTip": "ReactApp1.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T15:07:07.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": ".env",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\.env",
+              "RelativeDocumentMoniker": "reactapp1.client\\.env",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\.env",
+              "RelativeToolTip": "reactapp1.client\\.env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-30T15:06:54.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "main.tsx",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\main.tsx",
               "RelativeDocumentMoniker": "reactapp1.client\\src\\main.tsx",
@@ -66,12 +117,11 @@
               "RelativeToolTip": "reactapp1.client\\src\\main.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-30T14:46:02.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:46:02.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "NowaFaktura.tsx",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\NowaFaktura.tsx",
               "RelativeDocumentMoniker": "reactapp1.client\\src\\NowaFaktura.tsx",
@@ -79,12 +129,11 @@
               "RelativeToolTip": "reactapp1.client\\src\\NowaFaktura.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-30T14:44:00.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:44:00.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Faktury.tsx",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Faktury.tsx",
               "RelativeDocumentMoniker": "reactapp1.client\\src\\Faktury.tsx",
@@ -92,12 +141,11 @@
               "RelativeToolTip": "reactapp1.client\\src\\Faktury.tsx",
               "ViewState": "AgIAAIgAAAAAAAAAAAAuwK0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-30T14:43:50.544Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:43:50.544Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Faktury.css",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Faktury.css",
               "RelativeDocumentMoniker": "reactapp1.client\\src\\Faktury.css",
@@ -105,12 +153,11 @@
               "RelativeToolTip": "reactapp1.client\\src\\Faktury.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-30T14:43:49.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:43:49.688Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "NowaFaktura.css",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\NowaFaktura.css",
               "RelativeDocumentMoniker": "reactapp1.client\\src\\NowaFaktura.css",
@@ -118,12 +165,11 @@
               "RelativeToolTip": "reactapp1.client\\src\\NowaFaktura.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-30T14:43:47.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:43:47.225Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\User.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\User.cs",
@@ -131,12 +177,11 @@
               "RelativeToolTip": "ReactApp1.Server\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:33:40.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:33:40.354Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Faktura.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Faktura.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\Faktura.cs",
@@ -144,12 +189,11 @@
               "RelativeToolTip": "ReactApp1.Server\\Models\\Faktura.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:29:33.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:29:33.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "CreateFakturaDto.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\CreateFakturaDto.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Data\\CreateFakturaDto.cs",
@@ -157,12 +201,11 @@
               "RelativeToolTip": "ReactApp1.Server\\Data\\CreateFakturaDto.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAywCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:29:25.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:29:25.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "FakturyController.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\FakturyController.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Controllers\\FakturyController.cs",
@@ -170,12 +213,11 @@
               "RelativeToolTip": "ReactApp1.Server\\Controllers\\FakturyController.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAswJkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T14:26:03.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T14:26:03.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Data\\AppDbContext.cs",

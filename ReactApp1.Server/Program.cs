@@ -101,6 +101,12 @@ app.MapGet("/api/statystyki/miesieczne/{login}", async (string login, AppDbConte
 
     return Results.Ok(wynik);
 });
+var smtpPassword = Environment.GetEnvironmentVariable("SMTP_PASSWORD");
+
+builder.Services.Configure<SmtpSettings>(options =>
+{
+    options.Password = smtpPassword;
+});
 
 if (app.Environment.IsDevelopment())
 {
