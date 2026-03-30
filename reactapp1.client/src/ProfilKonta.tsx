@@ -153,7 +153,7 @@ export default function ProfilKonta() {
 
                     <nav className="profil-nav">
                         <NavLink to="/">Płatności</NavLink>
-                        <NavLink to="/profil">Faktury</NavLink>
+                        <NavLink to="/faktury">Faktury</NavLink>
                         <NavLink to="/statystyki">Statystyki</NavLink>
                     </nav>
                 </div>

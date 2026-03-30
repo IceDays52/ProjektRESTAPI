@@ -3,48 +3,44 @@
   "WorkspaceRootPath": "D:\\ProjektZbazadanych\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\profilkonta.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\profilkonta.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\kolowywykresfinanse.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\kolowywykresfinanse.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\logowanie.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\logowanie.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\controllers\\documentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\models\\uploaddocumentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\models\\uploaddocumentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\profilkonta.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\profilkonta.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\faktury.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\faktury.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\nowafaktura.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\nowafaktura.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\faktury.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\faktury.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|d:\\projektzbazadanych\\reactapp1.client\\src\\nowafaktura.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{372AB1E8-7CBB-9DB4-7313-847C4133320E}|reactapp1.client\\reactapp1.client.esproj|solutionrelative:reactapp1.client\\src\\nowafaktura.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\controllers\\fakturycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\controllers\\fakturycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\data\\createfakturadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\data\\createfakturadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\models\\faktura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\models\\faktura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|d:\\projektzbazadanych\\reactapp1.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26BE222D-99DB-4FAC-9C5C-792D03444864}|ReactApp1.Server\\ReactApp1.Server.csproj|solutionrelative:reactapp1.server\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,140 +58,133 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Logowanie.tsx",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Logowanie.tsx",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\Logowanie.tsx",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Logowanie.tsx",
-              "RelativeToolTip": "reactapp1.client\\src\\Logowanie.tsx",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "main.tsx",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\main.tsx",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\main.tsx",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\main.tsx",
+              "RelativeToolTip": "reactapp1.client\\src\\main.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-27T12:35:47.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\index.html",
-              "RelativeDocumentMoniker": "reactapp1.client\\index.html",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\index.html",
-              "RelativeToolTip": "reactapp1.client\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-27T12:26:13.382Z",
+              "WhenOpened": "2026-03-30T14:46:02.54Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\appsettings.json",
-              "RelativeDocumentMoniker": "ReactApp1.Server\\appsettings.json",
-              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\appsettings.json",
-              "RelativeToolTip": "ReactApp1.Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-27T12:25:48.245Z",
+              "Title": "NowaFaktura.tsx",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\NowaFaktura.tsx",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\NowaFaktura.tsx",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\NowaFaktura.tsx",
+              "RelativeToolTip": "reactapp1.client\\src\\NowaFaktura.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-30T14:44:00.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Program.cs",
-              "RelativeDocumentMoniker": "ReactApp1.Server\\Program.cs",
-              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Program.cs",
-              "RelativeToolTip": "ReactApp1.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA9AAAAAAAAAA==",
+              "Title": "Faktury.tsx",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Faktury.tsx",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\Faktury.tsx",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Faktury.tsx",
+              "RelativeToolTip": "reactapp1.client\\src\\Faktury.tsx",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAuwK0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-30T14:43:50.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Faktury.css",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Faktury.css",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\Faktury.css",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\Faktury.css",
+              "RelativeToolTip": "reactapp1.client\\src\\Faktury.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-30T14:43:49.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NowaFaktura.css",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\NowaFaktura.css",
+              "RelativeDocumentMoniker": "reactapp1.client\\src\\NowaFaktura.css",
+              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\NowaFaktura.css",
+              "RelativeToolTip": "reactapp1.client\\src\\NowaFaktura.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-30T14:43:47.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\User.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\User.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T12:24:29.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KolowyWykresFinanse.tsx",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\KolowyWykresFinanse.tsx",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\KolowyWykresFinanse.tsx",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\KolowyWykresFinanse.tsx",
-              "RelativeToolTip": "reactapp1.client\\src\\KolowyWykresFinanse.tsx",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAGMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-27T12:18:14.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProfilKonta.tsx",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\ProfilKonta.tsx",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\ProfilKonta.tsx",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\ProfilKonta.tsx*",
-              "RelativeToolTip": "reactapp1.client\\src\\ProfilKonta.tsx*",
-              "ViewState": "AgIAANkAAAAAAAAAAAAgwOcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-26T14:57:26.98Z",
+              "WhenOpened": "2026-03-30T14:33:40.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ProfilKonta.css",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\ProfilKonta.css",
-              "RelativeDocumentMoniker": "reactapp1.client\\src\\ProfilKonta.css",
-              "ToolTip": "D:\\ProjektZbazadanych\\reactapp1.client\\src\\ProfilKonta.css",
-              "RelativeToolTip": "reactapp1.client\\src\\ProfilKonta.css",
-              "ViewState": "AgIAACQCAAAAAAAAAAAUwDUCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-27T10:54:22.498Z"
+              "Title": "Faktura.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Faktura.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\Faktura.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Faktura.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Models\\Faktura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T14:29:33.287Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "UploadDocumentRequest.cs",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\UploadDocumentRequest.cs",
-              "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\UploadDocumentRequest.cs",
-              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\UploadDocumentRequest.cs",
-              "RelativeToolTip": "ReactApp1.Server\\Models\\UploadDocumentRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Title": "CreateFakturaDto.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\CreateFakturaDto.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Data\\CreateFakturaDto.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\CreateFakturaDto.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Data\\CreateFakturaDto.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T11:29:22.39Z"
+              "WhenOpened": "2026-03-30T14:29:25.63Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "DocumentsController.cs",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\DocumentsController.cs",
-              "RelativeDocumentMoniker": "ReactApp1.Server\\Controllers\\DocumentsController.cs",
-              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\DocumentsController.cs",
-              "RelativeToolTip": "ReactApp1.Server\\Controllers\\DocumentsController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAkwHkAAAABAAAAAAAAAA==",
+              "Title": "FakturyController.cs",
+              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\FakturyController.cs",
+              "RelativeDocumentMoniker": "ReactApp1.Server\\Controllers\\FakturyController.cs",
+              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Controllers\\FakturyController.cs",
+              "RelativeToolTip": "ReactApp1.Server\\Controllers\\FakturyController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAswJkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T11:00:48.776Z"
+              "WhenOpened": "2026-03-30T14:26:03.82Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "ReactApp1.Server\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Data\\AppDbContext.cs",
               "RelativeToolTip": "ReactApp1.Server\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwBgAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T11:00:45.139Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Document.cs",
-              "DocumentMoniker": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Document.cs",
-              "RelativeDocumentMoniker": "ReactApp1.Server\\Models\\Document.cs",
-              "ToolTip": "D:\\ProjektZbazadanych\\ReactApp1.Server\\Models\\Document.cs",
-              "RelativeToolTip": "ReactApp1.Server\\Models\\Document.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T11:00:37.427Z"
+              "WhenOpened": "2026-03-30T14:24:59.69Z",
+              "EditorCaption": ""
             }
           ]
         }

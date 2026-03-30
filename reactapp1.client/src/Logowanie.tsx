@@ -1,12 +1,10 @@
 ﻿import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 import LottieModule from "lottie-react";
 import animationData from "./assets/zpunet-icon.json";
-import { useEffect } from "react";
-
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
@@ -36,17 +34,6 @@ const formVariants: Variants = {
 export default function Logowanie() {
     const [message, setMessage] = useState<string | null>(null);
     const [messageType, setMessageType] = useState<"success" | "error" | null>(null);
-    useEffect(() => {
-        if (message) {
-            const timer = setTimeout(() => {
-                setMessage(null);
-            }, 6000);
-
-            return () => clearTimeout(timer);
-        }
-    }, [message]);
-
-   
 
     const navigate = useNavigate();
     const Lottie = (LottieModule as any).default ?? LottieModule;
@@ -69,6 +56,33 @@ export default function Logowanie() {
     const [year, setYear] = useState("");
 
     const [isLogin, setIsLogin] = useState(true);
+    const [showVerification, setShowVerification] = useState(false);
+    const [verificationEmail, setVerificationEmail] = useState("");
+    const [verificationCode, setVerificationCode] = useState("");
+
+    useEffect(() => {
+        if (message) {
+            const timer = setTimeout(() => {
+                setMessage(null);
+            }, 6000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [message]);
+
+    const parseResponse = async (response: Response) => {
+        const text = await response.text();
+
+        try {
+            return text ? JSON.parse(text) : {};
+        } catch {
+            return { message: text || "Nieznana odpowiedź serwera" };
+        }
+    };
+
+    const handleForgotPassword = () => {
+        navigate("/forgot-password");
+    };
 
     const resetLoginForm = () => {
         setLogin("");
@@ -88,6 +102,10 @@ export default function Logowanie() {
         setYear("");
     };
 
+    const resetVerificationForm = () => {
+        setVerificationCode("");
+    };
+
     const handleRegisterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -105,21 +123,18 @@ export default function Logowanie() {
         ) {
             setMessage("Wypełnij wszystkie pola");
             setMessageType("error");
-            resetRegisterForm();
             return;
         }
 
         if (registerEmail !== confirmEmail) {
             setMessage("E-maile się nie zgadzają");
             setMessageType("error");
-            resetRegisterForm();
             return;
         }
 
         if (registerPassword !== confirmPassword) {
             setMessage("Hasła się nie zgadzają");
             setMessageType("error");
-            resetRegisterForm();
             return;
         }
 
@@ -144,22 +159,61 @@ export default function Logowanie() {
                 body: JSON.stringify(registerData)
             });
 
-            const data = await response.json();
+            const data = await parseResponse(response);
 
             if (!response.ok) {
                 throw new Error(data?.message || "Błąd rejestracji");
             }
 
-            console.log("Rejestracja OK:", data);
-            setMessage("Konto utworzone!");
+            setVerificationEmail(registerEmail);
+            setShowVerification(true);
+            setMessage(data?.message || "Konto utworzone. Wpisz kod wysłany na email.");
             setMessageType("success");
-            setIsLogin(true);
-        } catch (error) {
-            console.error("Błąd:", error);
-            setMessage("Nie udało się zarejestrować");
-            setMessageType("error");
-        } finally {
             resetRegisterForm();
+        } catch (error: any) {
+            console.error("Błąd:", error);
+            setMessage(error.message || "Nie udało się zarejestrować");
+            setMessageType("error");
+        }
+    };
+
+    const handleVerifyEmailSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!verificationEmail || !verificationCode) {
+            setMessage("Wpisz kod weryfikacyjny");
+            setMessageType("error");
+            return;
+        }
+
+        try {
+            const response = await fetch("https://localhost:7093/api/Auth/verify-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                credentials: "include",
+                body: JSON.stringify({
+                    email: verificationEmail,
+                    code: verificationCode
+                })
+            });
+
+            const data = await parseResponse(response);
+
+            if (!response.ok) {
+                throw new Error(data?.message || "Błąd weryfikacji");
+            }
+
+            setMessage(data?.message || "Email został potwierdzony. Możesz się zalogować.");
+            setMessageType("success");
+            setShowVerification(false);
+            setIsLogin(true);
+            resetVerificationForm();
+        } catch (error: any) {
+            console.error("Błąd:", error);
+            setMessage(error.message || "Nie udało się potwierdzić emaila");
+            setMessageType("error");
         }
     };
 
@@ -167,8 +221,8 @@ export default function Logowanie() {
         e.preventDefault();
 
         if (!login || !loginPassword) {
-            alert("Wypełnij wszystkie pola");
-            resetLoginForm();
+            setMessage("Wypełnij wszystkie pola");
+            setMessageType("error");
             return;
         }
 
@@ -187,22 +241,29 @@ export default function Logowanie() {
                 body: JSON.stringify(loginData)
             });
 
-            const data = await response.json();
+            const data = await parseResponse(response);
 
             if (!response.ok) {
+                if (data?.requiresEmailVerification) {
+                    setVerificationEmail(data.email || "");
+                    setShowVerification(true);
+                    setMessage(data.message || "Email nie został potwierdzony. Wpisz kod z emaila.");
+                    setMessageType("success");
+                    return;
+                }
+
                 throw new Error(data?.message || "Błąd logowania");
             }
 
-            console.log("Zalogowano:", data);
-            setMessage("Zalogowano poprawnie");
+            setMessage(data?.message || "Zalogowano poprawnie");
             setMessageType("success");
 
             setTimeout(() => {
                 navigate("/profil-konta");
             }, 800);
-        } catch (error) {
+        } catch (error: any) {
             console.error("Błąd:", error);
-            setMessage("Nie udało się zalogować");
+            setMessage(error.message || "Nie udało się zalogować");
             setMessageType("error");
         } finally {
             resetLoginForm();
@@ -281,29 +342,11 @@ export default function Logowanie() {
                                 viewport={{ once: true, amount: 0.2 }}
                             >
                                 <span className="link-icon">📊</span>
-                                <motion.div
-                                    className="link-content"
-                                    variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}
-                                >
-                                    <motion.div
-                                        className="link-title"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
+                                <motion.div className="link-content">
+                                    <motion.div className="link-title">
                                         Zaloz Firme/Ksef Informacje
                                     </motion.div>
-                                    <motion.div
-                                        className="link-description"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
+                                    <motion.div className="link-description">
                                         Jak zalozyc firme? Problem z ksefem?
                                     </motion.div>
                                 </motion.div>
@@ -317,29 +360,11 @@ export default function Logowanie() {
                                 viewport={{ once: true, amount: 0.2 }}
                             >
                                 <span className="link-icon">📈</span>
-                                <motion.div
-                                    className="link-content"
-                                    variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}
-                                >
-                                    <motion.div
-                                        className="link-title"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
+                                <motion.div className="link-content">
+                                    <motion.div className="link-title">
                                         Ksiegowosc
                                     </motion.div>
-                                    <motion.div
-                                        className="link-description"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
+                                    <motion.div className="link-description">
                                         Jak wyglada praca z nami!!
                                     </motion.div>
                                 </motion.div>
@@ -353,29 +378,11 @@ export default function Logowanie() {
                                 viewport={{ once: true, amount: 0.2 }}
                             >
                                 <span className="link-icon">📄</span>
-                                <motion.div
-                                    className="link-content"
-                                    variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}
-                                >
-                                    <motion.div
-                                        className="link-title"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
+                                <motion.div className="link-content">
+                                    <motion.div className="link-title">
                                         Cennik
                                     </motion.div>
-                                    <motion.div
-                                        className="link-description"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    >
+                                    <motion.div className="link-description">
                                         Zobacz cennik ksiegowosci
                                     </motion.div>
                                 </motion.div>
@@ -389,19 +396,9 @@ export default function Logowanie() {
                                 viewport={{ once: true, amount: 0.2 }}
                             >
                                 <span className="link-icon">🔍</span>
-                                <motion.div
-                                    className="link-content"
-                                    variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}
-                                >
+                                <motion.div className="link-content">
                                     <motion.div
                                         className="link-title"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
                                         onClick={() => navigate("/logowanie")}
                                         style={{ cursor: "pointer" }}
                                         role="button"
@@ -410,13 +407,7 @@ export default function Logowanie() {
                                         Zaloguj/Rejestracja
                                     </motion.div>
 
-                                    <motion.div
-                                        className="link-description"
-                                        variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}
-                                    />
+                                    <motion.div className="link-description" />
                                 </motion.div>
                             </motion.div>
                         </motion.div>
@@ -440,33 +431,82 @@ export default function Logowanie() {
                 </div>
 
                 <div>
-                    <div className="auth-switch">
-                        <button
-                            type="button"
-                            className={isLogin ? "switch-btn active" : "switch-btn"}
-                            onClick={() => {
-                                resetRegisterForm();
-                                setIsLogin(true);
-                            }}
-                        >
-                            Zaloguj się
-                        </button>
+                    {!showVerification && (
+                        <div className="auth-switch">
+                            <button
+                                type="button"
+                                className={isLogin ? "switch-btn active" : "switch-btn"}
+                                onClick={() => {
+                                    resetRegisterForm();
+                                    setShowVerification(false);
+                                    setIsLogin(true);
+                                }}
+                            >
+                                Zaloguj się
+                            </button>
 
-                        <button
-                            type="button"
-                            className={!isLogin ? "switch-btn active" : "switch-btn"}
-                            onClick={() => {
-                                resetLoginForm();
-                                setIsLogin(false);
-                            }}
-                        >
-                            Rejestracja
-                        </button>
-                    </div>
+                            <button
+                                type="button"
+                                className={!isLogin ? "switch-btn active" : "switch-btn"}
+                                onClick={() => {
+                                    resetLoginForm();
+                                    setShowVerification(false);
+                                    setIsLogin(false);
+                                }}
+                            >
+                                Rejestracja
+                            </button>
+                        </div>
+                    )}
 
                     <div className="auth-panel">
                         <AnimatePresence mode="wait">
-                            {isLogin ? (
+                            {showVerification ? (
+                                <motion.div
+                                    key="verify"
+                                    className="register-box"
+                                    variants={formVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    exit="exit"
+                                >
+                                    <h1>POTWIERDŹ EMAIL</h1>
+
+                                    <form className="my-form" onSubmit={handleVerifyEmailSubmit}>
+                                        <input
+                                            type="email"
+                                            placeholder="Email"
+                                            className="dark-input"
+                                            value={verificationEmail}
+                                            readOnly
+                                        />
+
+                                        <input
+                                            type="text"
+                                            placeholder="Kod z emaila"
+                                            className="dark-input"
+                                            value={verificationCode}
+                                            onChange={(e) => setVerificationCode(e.target.value)}
+                                        />
+
+                                        <button type="submit" className="start-btn small-btn">
+                                            Potwierdź konto
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            className="PrzypomnijHaslo"
+                                            onClick={() => {
+                                                setShowVerification(false);
+                                                setIsLogin(true);
+                                                resetVerificationForm();
+                                            }}
+                                        >
+                                            Wróć do logowania
+                                        </button>
+                                    </form>
+                                </motion.div>
+                            ) : isLogin ? (
                                 <motion.div
                                     key="login"
                                     className="login-box"
@@ -501,9 +541,9 @@ export default function Logowanie() {
                                         <button
                                             type="button"
                                             className="PrzypomnijHaslo"
-                                            onClick={resetLoginForm}
+                                            onClick={handleForgotPassword}
                                         >
-                                            Wyczyść pola
+                                            Przypomnij hasło
                                         </button>
                                     </form>
                                 </motion.div>
@@ -631,6 +671,7 @@ export default function Logowanie() {
                     </div>
                 </div>
             </section>
+
             <AnimatePresence>
                 {message && (
                     <motion.div

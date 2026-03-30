@@ -2,6 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using ReactApp1.Server.Data;
 using ReactApp1.Server.Models;
+using System.Net;
+using System.Net.Mail;
+using Microsoft.Extensions.Options;
+
+
 
 namespace ReactApp1.Server.Controllers
 {
@@ -33,5 +38,8 @@ namespace ReactApp1.Server.Controllers
 
             return Ok(nowaWiadomosc);
         }
+      
+
+
     }
 }

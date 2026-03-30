@@ -1,0 +1,111 @@
+@import "./Faktury.css";
+
+.nowa-faktura-page {
+    display: flex;
+    min-height: 100vh;
+    color: white;
+}
+
+.nowa-faktura-main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    padding: 32px;
+}
+
+.nowa-faktura-hero {
+    background: rgba(17, 17, 26, 0.9);
+    border: 1px solid rgba(124, 92, 255, 0.15);
+    border-radius: 38px;
+    padding: 28px 36px;
+    margin-bottom: 24px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+    .nowa-faktura-hero h1 {
+        margin: 0 0 8px 0;
+        font-size: 2.3rem;
+        font-weight: 800;
+    }
+
+    .nowa-faktura-hero p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+.nowa-faktura-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nowa-faktura-card {
+    background: rgba(17, 17, 26, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 32px;
+    padding: 28px;
+}
+
+    .nowa-faktura-card h2 {
+        margin: 0 0 20px 0;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.secondary-btn {
+    border: 1px solid rgba(140, 122, 255, 0.28);
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    background: rgba(83, 63, 160, 0.18);
+}
+
+@media (max-width: 1200px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .nowa-faktura-main {
+        width: calc(100% - 64px);
+        margin-left: 64px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .nowa-faktura-main {
+        width: 100%;
+        margin-left: 0;
+        padding: 88px 16px 16px 16px;
+    }
+
+    .form-grid,
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,135 @@
+.forgot-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    background: transparent;
+    color: white;
+}
+
+.forgot-card {
+    width: 100%;
+    max-width: 560px;
+    background: rgba(17, 17, 26, 0.88);
+    border: 1px solid rgba(124, 92, 255, 0.18);
+    border-radius: 34px;
+    padding: 36px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(14px);
+}
+
+.forgot-header {
+    margin-bottom: 28px;
+}
+
+    .forgot-header h1 {
+        margin: 0 0 10px 0;
+        font-size: 2.1rem;
+        font-weight: 800;
+        color: #ffffff;
+    }
+
+    .forgot-header p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+.forgot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+    .forgot-form label {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.88);
+    }
+
+    .forgot-form input {
+        width: 100%;
+        padding: 16px 18px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        box-sizing: border-box;
+    }
+
+        .forgot-form input::placeholder {
+            color: rgba(255, 255, 255, 0.42);
+        }
+
+        .forgot-form input:focus {
+            border-color: rgba(124, 92, 255, 0.6);
+            box-shadow: 0 0 0 4px rgba(124, 92, 255, 0.12);
+            transform: translateY(-1px);
+        }
+
+    .forgot-form button {
+        margin-top: 8px;
+        border: none;
+        border-radius: 18px;
+        padding: 15px 20px;
+        font-weight: 800;
+        font-size: 1rem;
+        color: #ffffff;
+        cursor: pointer;
+        background: linear-gradient(135deg, rgba(140, 129, 255, 0.98), rgba(110, 97, 255, 0.98));
+        box-shadow: 0 10px 24px rgba(98, 83, 214, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+        .forgot-form button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 30px rgba(98, 83, 214, 0.35);
+        }
+
+.forgot-message {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border-radius: 18px;
+    background: rgba(83, 63, 160, 0.18);
+    border: 1px solid rgba(140, 122, 255, 0.18);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    line-height: 1.5;
+    animation: fadeInAlert 0.25s ease;
+}
+
+@media (max-width: 640px) {
+    .forgot-page {
+        padding: 18px;
+    }
+
+    .forgot-card {
+        padding: 24px;
+        border-radius: 26px;
+    }
+
+    .forgot-header h1 {
+        font-size: 1.65rem;
+    }
+
+    .forgot-form input,
+    .forgot-form button {
+        padding: 14px 16px;
+    }
+}
+.forgot-message.success {
+    background: rgba(45, 212, 145, 0.14);
+    border: 1px solid rgba(45, 212, 145, 0.35);
+    color: #8df4bf;
+}
+
+.forgot-message.error {
+    background: rgba(248, 113, 113, 0.14);
+    border: 1px solid rgba(248, 113, 113, 0.35);
+    color: #ff9b9b;
+}

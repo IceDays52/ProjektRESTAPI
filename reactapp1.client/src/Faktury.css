@@ -1,0 +1,312 @@
+.faktury-page {
+    display: flex;
+    min-height: 100vh;
+    background: transparent;
+    color: white;
+}
+
+.faktury-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 100vh;
+    background: rgba(17, 17, 26, 0.92);
+    backdrop-filter: blur(14px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    z-index: 100;
+    transition: width 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+    .faktury-sidebar.open {
+        width: 280px;
+    }
+
+.faktury-sidebar-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faktury-bars {
+    display: flex;
+    gap: 6px;
+}
+
+    .faktury-bars span {
+        display: block;
+        width: 4px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 20px;
+        transition: 0.3s ease;
+    }
+
+.faktury-sidebar-content {
+    margin-left: 72px;
+    height: 100%;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faktury-logo {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0 0 48px 0;
+    cursor: pointer;
+    color: white;
+}
+
+.faktury-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+    .faktury-nav a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 1.5rem;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(18px);
+        pointer-events: none;
+        transition: transform 0.35s ease, opacity 0.35s ease, color 0.25s ease;
+    }
+
+.faktury-sidebar.open .faktury-nav a {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.faktury-nav a:hover,
+.faktury-nav a.active {
+    color: #7c5cff;
+}
+
+.faktury-main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+    padding: 32px;
+}
+
+.faktury-hero {
+    background: rgba(17, 17, 26, 0.9);
+    border: 1px solid rgba(124, 92, 255, 0.15);
+    border-radius: 38px;
+    padding: 28px 36px;
+    margin-bottom: 24px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+    .faktury-hero h1 {
+        margin: 0 0 8px 0;
+        font-size: 2.3rem;
+        font-weight: 800;
+    }
+
+    .faktury-hero p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.65);
+    }
+
+.faktury-card {
+    background: rgba(17, 17, 26, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 32px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.filters-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.faktury-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .faktury-field label {
+        color: rgba(255, 255, 255, 0.82);
+        font-weight: 600;
+    }
+
+    .faktury-field input,
+    .faktury-field select {
+        width: 100%;
+        height: 46px;
+        border-radius: 16px;
+        border: 1px solid rgba(147, 129, 255, 0.2);
+        background: rgba(83, 63, 160, 0.18);
+        color: white;
+        padding: 0 14px;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+.faktury-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faktury-table {
+    display: grid;
+    grid-template-columns: 1.2fr 1.3fr 1.3fr 1fr 1fr 1fr 1fr 1fr 1.2fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.faktury-table-header {
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 700;
+    padding: 0 10px 10px 10px;
+}
+
+.faktury-table-row {
+    background: rgba(83, 63, 160, 0.18);
+    border: 1px solid rgba(140, 122, 255, 0.18);
+    border-radius: 22px;
+    padding: 18px 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .faktury-table-row:hover {
+        transform: translateY(-2px);
+        border-color: rgba(124, 92, 255, 0.35);
+    }
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+    .status-badge.wystawiona {
+        background: rgba(250, 204, 21, 0.18);
+        color: #ffd76b;
+    }
+
+    .status-badge.op³acona,
+    .status-badge.oplacona {
+        background: rgba(45, 212, 145, 0.18);
+        color: #8df4bf;
+    }
+
+    .status-badge.anulowana {
+        background: rgba(248, 113, 113, 0.18);
+        color: #ff9b9b;
+    }
+
+.primary-btn {
+    border: none;
+    border-radius: 16px;
+    padding: 12px 20px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgba(140, 129, 255, 0.98), rgba(110, 97, 255, 0.98));
+    box-shadow: 0 10px 24px rgba(98, 83, 214, 0.25);
+}
+
+@media (max-width: 1200px) {
+    .faktury-table {
+        grid-template-columns: 1fr;
+    }
+
+    .faktury-table-header {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .filters-row {
+        grid-template-columns: 1fr;
+    }
+
+    .faktury-main {
+        width: calc(100% - 64px);
+        margin-left: 64px;
+        padding: 20px;
+    }
+
+    .faktury-sidebar {
+        width: 64px;
+    }
+
+        .faktury-sidebar.open {
+            width: 240px;
+        }
+
+    .faktury-sidebar-trigger {
+        width: 64px;
+    }
+
+    .faktury-sidebar-content {
+        margin-left: 64px;
+    }
+}
+
+@media (max-width: 640px) {
+    .faktury-sidebar {
+        width: 0;
+        border-right: none;
+    }
+
+        .faktury-sidebar.open {
+            width: 100%;
+        }
+
+    .faktury-sidebar-trigger {
+        width: 64px;
+        height: 64px;
+        top: 12px;
+        left: 12px;
+        background: rgba(17, 17, 26, 0.9);
+        border-radius: 20px;
+        position: fixed;
+    }
+
+    .faktury-sidebar-content {
+        margin-left: 0;
+        padding: 90px 24px 24px 24px;
+    }
+
+    .faktury-main {
+        width: 100%;
+        margin-left: 0;
+        padding: 88px 16px 16px 16px;
+    }
+
+    .faktury-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

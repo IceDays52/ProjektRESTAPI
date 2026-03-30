@@ -173,44 +173,8 @@ export default function App() {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.2 }}>
-                            <motion.div className="link-item" variants={fadeUp}
-                                initial="hidden"
-                                whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
-                                <span className="link-icon">📊</span>
-                                <motion.div className="link-content" variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div className="link-title" variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Dashboard</motion.div>
-                                    <motion.div className="link-description" variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>View stats</motion.div>
-                                </motion.div>
-                            </motion.div>
-                            <motion.div className="link-item" variants={fadeUp}
-                                initial="hidden"
-                                whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}>
-                                <span className="link-icon">📈</span>
-                                <motion.div className="link-content" variants={fadeUp}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    viewport={{ once: true, amount: 0.2 }}>
-                                    <motion.div className="link-title" variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Analytics</motion.div>
-                                    <motion.div className="link-description" variants={fadeUp}
-                                        initial="hidden"
-                                        whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Track progress</motion.div>
-                                </motion.div>
-                            </motion.div>
+                         
+                 
                             <motion.div className="link-item" variants={fadeUp}
                                 initial="hidden"
                                 whileInView="show"
@@ -223,11 +187,11 @@ export default function App() {
                                     <motion.div className="link-title" variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Reports</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}>Oferta</motion.div>
                                     <motion.div className="link-description" variants={fadeUp}
                                         initial="hidden"
                                         whileInView="show"
-                                        viewport={{ once: true, amount: 0.2 }}>Download data</motion.div>
+                                        viewport={{ once: true, amount: 0.2 }}>Sprawdz nasza oferte!!</motion.div>
                                 </motion.div>
                             </motion.div>
                             <motion.div className="link-item" variants={fadeUp}
